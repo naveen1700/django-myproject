@@ -16,6 +16,13 @@ pymysql.install_as_MySQLdb()
 import os
 from pathlib import Path
 
+import dj_database_url
+
+DATABASES = {
+    'default': dj_database_url.config(default='postgresql://...')
+}
+
+
 
 
 
@@ -28,6 +35,15 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 # Allow hosts: in Render, set ALLOWED_HOSTS env or use '*' during testing
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["django-myproject-cc8e.onrender.com", "www.django-myproject-cc8e.onrender.com"]
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "django-myproject-cc8e.onrender.com").split(",")
+ALLOWED_HOSTS = ["django-myproject-cc8e.onrender.com"]
+ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["django-myproject-cc8e.onrender.com"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "django-myproject-cc8e.onrender.com"]
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -65,7 +81,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
+
 
 ROOT_URLCONF = 'myproject.urls'
 
@@ -140,6 +158,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 
 # Default primary key field type
