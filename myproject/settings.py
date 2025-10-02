@@ -35,7 +35,7 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 # Allow hosts: in Render, set ALLOWED_HOSTS env or use '*' during testing
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 ALLOWED_HOSTS = ['.onrender.com']
-ALLOWED_HOSTS = ['*']
+
 ALLOWED_HOSTS = ['django-myproject-cc8e.onrender.com']
 ALLOWED_HOSTS = ['django-myproject-cc8e.onrender.com', '127.0.0.1', 'localhost']
 
