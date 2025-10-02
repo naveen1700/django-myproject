@@ -45,6 +45,12 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://django-myproject-cc8e.onrender.com',
+    'https://www.django-myproject-cc8e.onrender.com',
+    'https://yourcustomdomain.com',
+    'https://www.yourcustomdomain.com',
+]
 
 
 
