@@ -36,14 +36,7 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 ALLOWED_HOSTS = ['.onrender.com']
 
-ALLOWED_HOSTS = [
-    'django-myproject-cc8e.onrender.com',
-    'www.django-myproject-cc8e.onrender.com',
-    'yourcustomdomain.com',
-    'www.yourcustomdomain.com',
-    'localhost',
-    '127.0.0.1',
-]
+ALLOWED_HOSTS = ['django-myproject-cc8e.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://django-myproject-cc8e.onrender.com',
